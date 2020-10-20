@@ -1,0 +1,9 @@
+---
+ - hosts: all
+   gather_facts: true
+   tasks:
+   - ec2_metadata_facts:
+     register: metadata
+   - debug:
+       msg: "{{metadata}}"
+
